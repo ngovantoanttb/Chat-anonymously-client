@@ -15,7 +15,7 @@ const Join: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-indigo-50 to-blue-100 p-4">
+    <div className="flex items-center justify-center min-h-screen bg-linear-to-br from-indigo-50 to-blue-100 p-4">
       <div className="w-full max-w-md bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-8 transform transition-all hover:scale-[1.01] duration-300 border border-white/50">
         <div className="flex flex-col items-center mb-10 space-y-4">
           <div className="bg-indigo-600 p-4 rounded-2xl shadow-lg shadow-indigo-300">
@@ -54,7 +54,7 @@ const Join: React.FC = () => {
         </form>
 
         <div className="mt-8 text-center">
-            <p className="text-xs text-gray-400">Học ăn, học nói, học gói, học mở.</p>
+            <p className="text-base text-gray-400">Học ăn, học nói, học gói, học mở.</p>
         </div>
       </div>
     </div>

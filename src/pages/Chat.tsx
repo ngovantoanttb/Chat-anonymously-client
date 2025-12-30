@@ -161,24 +161,24 @@ const Chat: React.FC = () => {
               <LogOut className="w-6 h-6 text-red-600 pl-0.5" />
             </div>
             <h3 className="text-xl font-bold text-center text-gray-900 mb-2">
-              Sign Out?
+              Thoát
             </h3>
             <p className="text-center text-gray-500 mb-6">
-              Are you sure you want to leave? Your message history for this
-              session will be cleared.
+              Bạn có chắc chắn muốn rời đi không? Lịch sử tin nhắn của bạn trong
+              phiên này sẽ bị xóa.
             </p>
             <div className="flex space-x-3">
               <button
                 onClick={() => setIsLogoutModalOpen(false)}
                 className="flex-1 cursor-pointer px-4 py-2.5 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-colors"
               >
-                Cancel
+                Hủy
               </button>
               <button
                 onClick={confirmLogout}
                 className="flex-1 cursor-pointer px-4 py-2.5 bg-red-600 text-white font-semibold rounded-xl hover:bg-red-700 shadow-lg shadow-red-200 transition-all hover:-translate-y-0.5"
               >
-                Yes, Exit
+                Đồng ý
               </button>
             </div>
           </div>
