@@ -267,7 +267,7 @@ const Chat: React.FC = () => {
               {username?.charAt(0).toUpperCase()}
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-bold text-gray-900 truncate">
+              <p className="text-sm font-bold text-gray-900 truncate line-clamp-1">
                 {username}
               </p>
               <p className="text-xs text-green-600 flex items-center">
@@ -369,12 +369,15 @@ const Chat: React.FC = () => {
                                 : "hover:bg-gray-50 text-gray-700"
                             )}
                           >
-                            <div className="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold text-sm">
+                            <div className="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold text-sm line-clamp-1">
                               {u.charAt(0).toUpperCase()}
                             </div>
                             <div className="flex-1 text-left min-w-0">
-                              <span className="font-medium">{u}</span>
+                              <span className="font-medium block truncate">
+                                {u}
+                              </span>
                             </div>
+
                             {/* Unread Badge Mobile */}
                             {unreadUsers.has(u) && (
                               <span className="w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse shadow-sm shadow-red-200"></span>
@@ -480,7 +483,7 @@ const Chat: React.FC = () => {
               <div
                 key={idx}
                 className={clsx(
-                  "flex w-full animate-fade-in-up",
+                  "flex w-full animate-fade-in-up mb-1",
                   isMe ? "justify-end" : "justify-start"
                 )}
               >
@@ -491,14 +494,14 @@ const Chat: React.FC = () => {
                   )}
                 >
                   {!isMe && (
-                    <span className="text-xs text-gray-400 mb-1 ml-1 font-medium">
+                    <span className="text-xs text-gray-600 mb-1 ml-1 font-medium">
                       {msg.user}
                     </span>
                   )}
 
                   <div
                     className={clsx(
-                      "px-5 py-3 text-sm sm:text-base leading-relaxed wrap-break-word relative shadow-sm transition-all duration-200",
+                      "px-3 py-1 text-sm sm:text-base leading-relaxed wrap-break-word relative shadow-sm transition-all duration-200",
                       isMe
                         ? clsx(
                             "text-white rounded-2xl rounded-tr-sm",
@@ -521,9 +524,12 @@ const Chat: React.FC = () => {
                       isMe ? "mr-1" : "ml-1"
                     )}
                   >
-                    <span className="text-[10px] text-gray-400">
+                    <span className="text-[10px] text-gray-400 whitespace-nowrap shrink-0">
                       {msg.timestamp
-                        ? new Date(msg.timestamp).toLocaleTimeString([], {
+                        ? new Date(msg.timestamp).toLocaleString("vi-VN", {
+                            day: "2-digit",
+                            month: "2-digit",
+                            year: "numeric",
                             hour: "2-digit",
                             minute: "2-digit",
                           })
