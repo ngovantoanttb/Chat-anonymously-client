@@ -54,7 +54,7 @@ const Join: React.FC = () => {
         </form>
 
         <div className="mt-8 text-center">
-            <p className="text-base text-gray-400">Học ăn, học nói, học gói, học mở.</p>
+            <p className="text-base text-gray-400">Xây dựng nền tảng trò chuyện văn minh.</p>
         </div>
       </div>
     </div>

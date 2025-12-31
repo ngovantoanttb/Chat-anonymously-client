@@ -385,7 +385,21 @@ const Chat: React.FC = () => {
                   </ul>
                 </div>
               </div>
-              <div className="p-4 border-t">
+              <div className="p-4 border-t border-gray-300">
+                <div className="flex items-center space-x-3 mb-3 px-2">
+                  <div className="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-xs">
+                    {username?.charAt(0).toUpperCase()}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-bold text-gray-900 truncate">
+                      {username}
+                    </p>
+                    <p className="text-xs text-green-600 flex items-center">
+                      <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1"></span>{" "}
+                      Online
+                    </p>
+                  </div>
+                </div>
                 <button
                   onClick={handleLogoutClick}
                   className="cursor-pointer w-full py-3 bg-red-50 text-red-600 rounded-xl font-bold text-sm"
